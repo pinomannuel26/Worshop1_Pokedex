@@ -1,0 +1,173 @@
+*{
+    margin: 0px;
+}
+:root{ /* root, seudoclase  para variables de colores, para que sea mas facil al momento que se desee cambiarlos*/
+    --moradoOscuro:#9350b1; /*ese color ahora se llama con la variable*/
+    --moradoClaro: #f5cfee;
+    --grisClaro: #E3DFDE;
+}
+body{
+    background-color: var(--grisClaro); /*Llamamos a la variable de color que creamos*/
+    padding: 25px;
+}
+.encabezado{
+    background-color: var(--moradoOscuro);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 10px; /* separador de los elemento qe estan adentro*/
+    border-radius: 15px 15px 0 0; /*solo el border a la parte superior*/
+}
+.encabezado figure img{
+    width: 50px;
+   
+}
+.encabezado h1{
+    color: white;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background: var(--moradoClaro);
+    padding: 20px;
+}
+.charizard-container{
+    display: flex;
+    flex-direction: column; /*para que se organizen los elementos en colunas uno  al debajo del otros*/
+    width: 50%;
+    gap: 20px;
+}
+.title-charizard{
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+.title-charizard figure img{
+    height: 50px;
+    width: 50px;
+    
+}
+.img-charizard{
+    width: 100%; /*lo ponemos al 100%, pero del contenedor sdonde esta*/
+    /*Automaticamente se actualiza al 100% al with y al height*/
+}
+.info-pokemon{
+    background-color: white;
+    width: 40%;
+    display: flex;
+    flex-direction: column; /*Para que el contenido se vea en columna una debajo de la otra*/
+    justify-content: space-around; /*para que ocupen la misma distancia verticalmente*/
+    padding: 25px;
+    border-radius: 15px;
+
+}
+
+.papa-info{
+    display: flex;
+    font-size: 150%;
+
+}
+
+.hijo-info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+}
+
+.hijo-info :first-child {
+    color: var(--moradoOscuro);
+    font-weight: bold;
+    display: block;
+}
+
+
+
+.footer-container div{
+    width:  100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+    background-color: white;
+    margin: 0;
+    padding: 1ch 0 1ch 0 ;
+    border-radius: 0 0 15px 15px;
+}
+
+footer div h3{
+    margin-left: 2ch;
+}
+
+.img-foters figure img{
+    width: 80px;
+    height: 80px;
+    padding: 0.5rem;
+    background-color: var(--moradoClaro);
+    border-radius: 15px;
+    
+}
+.img-foters figure :hover{
+    border-radius: 15px;
+    background-color: var(--moradoOscuro);
+}
+
+@media screen and (max-width:500px)
+{ 
+    .encabezado{
+        justify-content: center;
+    }
+    
+    .main-container{
+
+        display: block;
+               
+    }
+    .charizard-container{
+        display: flex;
+        flex-direction: column; /*para que se organizen los elementos en colunas uno  al debajo del otros*/
+        width: 100%;
+        gap: 20px;
+        
+    }
+    .info-pokemon{
+        margin-top: -70px;
+        width: 100%;   
+        padding: 70px 0 0 0;
+        
+    }
+    .papa-info{
+        display: block;
+        width: 100%;
+    }
+    .hijo-info{
+        font-size: 80%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 0 0 0.5rem 0;
+    }
+
+    .footer-container div{
+        flex-direction: column;
+        justify-items: center;
+        background-color: white;
+        border-radius: 0 0 15px 15px;
+        margin: 0;
+    }
+    footer .img-foters {
+       
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+
+    }
+    
+   
+}
